@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+}
+/* define variables */
+:root {
+  --bg-color: #222222;
+  --primary-color: #33c61b;
+  --secondary-color: #ee3030;
+  --text-color: #d9d9d9;
+  --focus-color: #313131;
+}
+/*  */
+html {
+  background-color: var(--bg-color);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  overflow: hidden;
+}
+/* Header Properties */
+header {
+  height: 90px;
+  box-shadow: 0 0 40px #ffffff0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  width: 80%;
+  /* add Properties to div inside header */
+  div {
+    width: 576px;
+    height: 49px;
+    background: var(--focus-color);
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 0;
+    gap: 4px;
+    /* add Properties to input inside div */
+    input {
+      background: var(--focus-color);
+      border: none;
+      width: 576px;
+      height: 49px;
+      border-radius: 12px;
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+      padding-right: 8px;
+      z-index: 99;
+    }
+    /* edite input style when focus on */
+    input:focus,
+    input:focus-visible {
+      border: 1px solid #1670be;
+      box-shadow: 0 0 3px #1670be;
+      outline-offset: 0px;
+      outline: none;
+    }
+    /* search button style */
+    button {
+      width: 92px;
+      height: 31px;
+      background-color: var(--secondary-color);
+      border: none;
+      border-radius: 12px;
+    }
+    /* button style when hover*/
+    button:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      background-color: #cf4949;
+    }
+    /* i => icon (from fontawesome) */
+    i {
+      margin-right: 1rem;
+    }
+  }
+}
+/* define style for palastine logo container (div) */
+.palastine {
+  position: absolute;
+  left: 35%;
+  top: 1%;
+  /* palastine logo */
+  img {
+    width: 18.5rem;
+  }
+}
+/* define style for sideBar */
+nav {
+  position: absolute;
+  right: 0;
+  width: 20%;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 40px #ffffff0d;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  /* logo container */
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    img {
+      width: 12rem;
+    }
+  }
+  /* sideBar order links style */
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 24px;
+    font-weight: 500;
+    li {
+      list-style: none;
+      padding: 8px;
+      font-size: 22px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 12px;
+      margin: 1rem;
+      margin-right: 20px;
+      /* ancher link style */
+      a {
+        text-decoration: none;
+        .green-class {
+          color: var(--primary-color);
+        }
+        .red-class {
+          color: var(--secondary-color);
+        }
+      }
+    }
+    li:hover {
+      background-color: #313131;
+    }
+  }
+  /* hr element style */
+  hr {
+    background-color: var(--focus-color);
+    width: 12rem;
+    height: 2px;
+    border: none;
+    margin: 2rem;
+    color: rgb(49, 49, 49);
+  }
+}

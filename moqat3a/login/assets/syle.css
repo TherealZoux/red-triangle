@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+}
+/* define variables */
+:root {
+  --bg-color: #222222;
+  --primary-color: #33c61b;
+  --secondary-color: #ee3030;
+  --text-color: #d9d9d9;
+  --focus-color: #313131;
+}
+/*  */
+html {
+  background-color: var(--bg-color);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+#palastine {
+  position: absolute;
+  left: 35%;
+  z-index: -1;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.main {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+  height: 100%;
+  align-items: center;
+  form {
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    div {
+      position: relative;
+      img {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+      }
+      #pass {
+        top: 14px;
+      }
+    }
+    input {
+      background-color: var(--focus-color);
+      border: none;
+      padding: 0.5rem;
+      padding-right: 2.5rem;
+      padding-left: 2rem;
+      width: 500px;
+      height: 50px;
+      border-radius: 6px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    input:nth-child(3) {
+      background-color: var(--secondary-color);
+      font-size: 1rem;
+      height: 40px;
+      margin-top: 2.5rem;
+    }
+    input:nth-child(3):hover {
+      background-color: #f04444;
+      cursor: pointer;
+    }
+    /* edite input style when focus on */
+    input:focus,
+    input:focus-visible {
+      border: 1px solid #1670be;
+      box-shadow: 0 0 3px #1670be;
+      outline-offset: 0px;
+      outline: none;
+    }
+  }
+}
